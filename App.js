@@ -7,7 +7,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from './src/telas/Home';
 import Ficha from './src/telas/Ficha';
-import Jogo from './src/telas/Jogo';
 import Login from './src/telas/Login';
 
 import { Ionicons } from '@expo/vector-icons';
@@ -23,8 +22,8 @@ function Tabs(){
         size = 30
         if (route.name === 'Ficha') {
           iconName = focused ? 'copy' : 'copy-outline';
-        }else if (route.name === 'Jogo') {
-          iconName = focused ? 'game-controller' : 'game-controller-outline'; 
+        }else if (route.name === 'Home') {
+          iconName = focused ? 'house' : 'house-outline'; 
         }
         
         //aqui define os ícones que irão aparecer nas Tabs
@@ -39,7 +38,7 @@ function Tabs(){
     }}    
     >
       <Tab.Screen name= "Ficha" component={Ficha}></Tab.Screen>
-      <Tab.Screen name= "Jogo" component={Jogo}></Tab.Screen>
+      <Tab.Screen name= "Home" component={Home}></Tab.Screen>
     </Tab.Navigator>
   )
 }
@@ -63,7 +62,6 @@ export default function App() {
    </Stack.Screen>
    <Stack.Screen name="Login" component={Login} options={{headerShown: false}}></Stack.Screen>
    <Stack.Screen name="Home" component={Home} ></Stack.Screen>      
-   <Stack.Screen name="Jogo" component={Jogo} ></Stack.Screen>
  </Stack.Navigator>
 </NavigationContainer>
   );

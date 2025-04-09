@@ -19,14 +19,6 @@ export default function Home({route, navigation}){
                           <Text style={styles.textoBotao}>Ir para a ficha</Text>
                       </TouchableOpacity>
                   </View>
-                  <View style={styles.viewBotao}>
-                      <TouchableOpacity
-                          style={styles.button}
-                          onPress={() => navigation.navigate("Jogo")}
-                      >
-                          <Text style={styles.textoBotao}>Ir para o jogo</Text>
-                      </TouchableOpacity>
-                  </View>
                 </View>
              </ImageBackground> 
         </View>
